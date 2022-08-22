@@ -110,6 +110,27 @@ output.sdf - contains the conformers produced by EquiBind in .sdf format.
 
 
 
+# Running in Docker
+
+## Build
+```sh
+docker build -t equibind .
+```
+
+## Run 
+```sh
+## in JupyterLab IDE
+# with GPUs
+docker run --gpus all --name equibind --rm -p 8888:8888 equibind
+# with CPU and Mount a Directory
+docker run -v T:\equibind_tests:/data --name equibind --rm -p 8888:8888 equibind
+## in Bash
+docker exec -it equibind bash
+
+# and run (`conda activate equibind`)
+```
+
+
 # Reproducing paper numbers
 Download the data and place it as described in the "Dataset" section above.
 ### Using the provided model weights
