@@ -124,7 +124,7 @@ docker build -t equibind .
 docker run --gpus all --name equibind --rm -p 8888:8888 equibind
 # with CPU and Mount a Directory
 docker run -v T:\equibind_tests:/data --name equibind --rm -p 8888:8888 equibind
-## in Bash
+## Access Bash
 docker exec -it equibind bash
 
 # and run (`conda activate equibind`)
